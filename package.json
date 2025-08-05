@@ -1,0 +1,27 @@
+{
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "body-parser": "^2.2.0",
+    "chai": "^5.2.1",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^17.0.0",
+    "express": "^5.1.0",
+    "express-validator": "^7.2.1",
+    "jsonwebtoken": "^9.0.2",
+    "mocha": "^11.7.1",
+    "mongodb": "^6.17.0",
+    "mongoose": "^8.15.1",
+    "nodemon": "^3.1.10"
+  },
+  "name": "myback",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

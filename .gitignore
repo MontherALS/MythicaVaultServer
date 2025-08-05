@@ -1,0 +1,23 @@
+# node modules
+node_modules/
+
+# environment variables
+.env
+
+# logs
+logs
+*.log
+
+# OS / IDE
+.DS_Store
+*.swp
+.vscode/
+.idea/
+
+# cache
+.cache
+dist
+build
+
+# coverage
+coverage/
