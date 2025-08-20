@@ -9,14 +9,14 @@ exports.getCreatures = async (req, res, next) => {
     const race = req.query.race || null;
     const region = req.query.region || null;
 
-    // Constructing filter object based on query parameters
+    // ?Constructing filter object based on query parameters
     const regionFilter = region ? { region } : {};
     const raceFilter = race && race !== "All" ? { race } : {};
     const filter = { ...regionFilter, ...raceFilter };
 
-    // Count total creatures for pagination
+    // ? Count total creatures for pagination
     const allCreaturesCount = await Creatures.countDocuments(filter);
-    // Fetching creatures with pagination and filtering
+    //? Fetching creatures with pagination and filtering
     const creatures =
       (await Creatures.find(filter).skip(skip).limit(limit)) || [];
 
