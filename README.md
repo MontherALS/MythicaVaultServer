@@ -34,11 +34,11 @@ Backend API for **MythicaVault** — an Express.js + MongoDB application that pr
 
 3. create .env file with
    ```bash
-PORT=5000
-DBURL=<your-mongodb-connection-string>
-JWT_SECRET=<strong-jwt-secret>
-REFRESH_TOKEN_SECRET=<strong-refresh-secret>
-CLIENT_URL=http://localhost:3000
+     PORT=5000
+     DBURL=<your-mongodb-connection-string>
+     JWT_SECRET=<strong-jwt-secret>
+     REFRESH_TOKEN_SECRET=<strong-refresh-secret>
+     CLIENT_URL=http://localhost:3000
 
 4.run development mode with npm run dev
 
