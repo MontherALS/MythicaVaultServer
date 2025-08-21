@@ -27,23 +27,24 @@ Backend API for **MythicaVault** — an Express.js + MongoDB application that pr
 ##  Getting Started (Local Development)
 
 1. Clone the repository:
-   ```bash
+2. ```bash
    git clone https://github.com/MontherALS/MythicaVaultServer.git backend
    cd backend
-2. install dependencies with
- ```bash
+   ```
+3. install dependencies with
+```bash
   npm install
 ```
 5. create .env file with
-   ```bash
+```bash
      PORT=5000
      DBURL=<your-mongodb-connection-string>
      JWT_SECRET=<strong-jwt-secret>
      REFRESH_TOKEN_SECRET=<strong-refresh-secret>
      CLIENT_URL=http://localhost:3000
-
+```
 4.run development mode with 
-   ```bash     
+```bash     
     npm run dev
  ```
 
