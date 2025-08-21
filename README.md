@@ -1,17 +1,52 @@
-# MythicaVault Backend
+# MythicaVault Server (Backend)
 
-This is the backend for **MythicaVault**, built with **Node.js, Express, MongoDB, and JWT Authentication**.
+Backend API for **MythicaVault** — an Express.js + MongoDB application that provides authentication, rate limiting, and CRUD for mythical creatures.
 
-## 🚀 Features
-- User Authentication (Signup, Login, JWT + Refresh Tokens)
-- Protected Routes with Middleware
-- CRUD operations for Mythical Creatures
-- Input Validation & Error Handling
-- Rate Limiting & Security Middlewares
+---
 
-## 🛠 Tech Stack
-- Node.js
-- Express.js
-- MongoDB & Mongoose
-- JWT Authentication
-- CORS, Helmet, Rate-Limit
+##  Features
+-  **Authentication**: Signup, login, JWT + refresh tokens in secure HTTP-only cookies
+-  **Protected Routes**: Access control with `verifyToken` and `isAuth` middlewares
+-  **Creatures CRUD**: List, create, read, update, delete mythical creatures
+-  **Validation & Error Handling**: `express-validator` & centralized error catching
+-  **Security**: Helmet headers, rate-limiter, CORS  
+-  **Modular Architecture**: Organized in controllers, routes, middleware, models
+
+---
+
+##  Tech Stack
+| Layer | Technology |
+|-------|------------|
+| Server | Node.js, Express |
+| Database | MongoDB (Mongoose) |
+| Security | JWT, Helmet, Rate Limiting, CORS |
+| Code Quality | Modular controllers, validation, error handling |
+
+---
+
+##  Getting Started (Local Development)
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/MontherALS/MythicaVaultServer.git backend
+   cd backend
+2. install dependencies with npm install
+
+3. create .env file with
+PORT=5000
+DBURL=<your-mongodb-connection-string>
+JWT_SECRET=<strong-jwt-secret>
+REFRESH_TOKEN_SECRET=<strong-refresh-secret>
+CLIENT_URL=http://localhost:3000
+
+4.run development mode with npm run dev
+
+## If you have any suggestions or advice, feel free to open an issue or a pull request.
+Contributions are always welcome!
+
+
+
+
+
+
+
