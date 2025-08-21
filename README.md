@@ -33,6 +33,7 @@ Backend API for **MythicaVault** — an Express.js + MongoDB application that pr
 2. install dependencies with npm install
 
 3. create .env file with
+   ```bash
 PORT=5000
 DBURL=<your-mongodb-connection-string>
 JWT_SECRET=<strong-jwt-secret>
