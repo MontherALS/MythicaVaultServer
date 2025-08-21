@@ -27,7 +27,7 @@ Backend API for **MythicaVault** — an Express.js + MongoDB application that pr
 ##  Getting Started (Local Development)
 
 1. Clone the repository:
-2. ```bash
+   ```bash
    git clone https://github.com/MontherALS/MythicaVaultServer.git backend
    cd backend
    ```
