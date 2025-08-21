@@ -14,8 +14,6 @@ const signupRules = [
     }),
 
   check("password")
-    .isAlphanumeric()
-    .withMessage("Password must contain only letters and numbers")
     .isLength({ min: 6 })
     .withMessage("Password must be at least 6 characters"),
 

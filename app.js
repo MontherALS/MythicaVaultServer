@@ -12,10 +12,10 @@ const user = require("./routes/user.js");
 // Importing middleware
 const cookieParser = require("cookie-parser");
 const handdleError = require("./middleware/HandleError.js");
-
+const helmet = require("helmet");
 const dbUrl = process.env.DBURL;
 const port = process.env.PORT || 5000;
-
+const clientUrl = process.env.CLIENT_URL;
 const limiter = rateLimit({
   windowMs: 1 * 60 * 1000,
   max: 100,
@@ -26,13 +26,14 @@ app.use(express.json());
 
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: clientUrl,
     credentials: true,
   })
 );
-app.use(cookieParser());
-
+app.use(helmet());
 app.use(limiter);
+
+app.use(cookieParser());
 
 app.use(auth);
 

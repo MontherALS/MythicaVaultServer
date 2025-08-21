@@ -14,15 +14,9 @@ exports.getCreatures = async (req, res, next) => {
     const raceFilter = race && race !== "All" ? { race } : {};
     const filter = { ...regionFilter, ...raceFilter };
 
-    // ? Count total creatures for pagination
     const allCreaturesCount = await Creatures.countDocuments(filter);
-    //? Fetching creatures with pagination and filtering
     const creatures =
       (await Creatures.find(filter).skip(skip).limit(limit)) || [];
-
-    // const shuffledCreatures = creatures.sort(() => Math.random() - 0.5);
-
-    // console.log(shuffledCreatures[0]);
 
     res.status(200).json({
       page: page,
@@ -41,7 +35,7 @@ exports.getCreatureId = async (req, res, next) => {
     if (!creature) {
       return next(new AppError("Creature not found", 404));
     }
-    res.status(200).json(creature); // Return the creature directly
+    res.status(200).json(creature);
   } catch (err) {
     next(err);
   }
@@ -122,7 +116,6 @@ exports.updateCreature = async (req, res, next) => {
   if (race.trim() !== "") updateFields.race = race;
   if (abilities.trim() !== "") updateFields.abilities = abilities;
   if (weaknesses.trim() !== "") updateFields.weaknesses = weaknesses;
-  // if (tale.trim() !== "") updateFields.tale = tale;
   if (symbolism.trim() !== "") updateFields.symbolism = symbolism;
 
   try {

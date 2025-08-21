@@ -53,8 +53,8 @@ exports.login = async (req, res, next) => {
     );
     res.cookie("refreshToken", refreshToken, {
       httpOnly: true,
-      secure: false, //! change in devolopment
-      sameSite: "lax", //! change in devolopment
+      secure: true, //! !!change in devolopment
+      sameSite: "none", //! !!change in devolopment
       maxAge: 15 * 24 * 60 * 60 * 1000,
     });
     res.status(200).json({ token });
