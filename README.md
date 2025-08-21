@@ -30,9 +30,11 @@ Backend API for **MythicaVault** — an Express.js + MongoDB application that pr
    ```bash
    git clone https://github.com/MontherALS/MythicaVaultServer.git backend
    cd backend
-2. install dependencies with npm install
-
-3. create .env file with
+2. install dependencies with
+ ```bash
+  npm install
+```
+5. create .env file with
    ```bash
      PORT=5000
      DBURL=<your-mongodb-connection-string>
@@ -40,7 +42,11 @@ Backend API for **MythicaVault** — an Express.js + MongoDB application that pr
      REFRESH_TOKEN_SECRET=<strong-refresh-secret>
      CLIENT_URL=http://localhost:3000
 
-4.run development mode with npm run dev
+4.run development mode with 
+   ```bash     
+    npm run dev
+ ```
+
 
 ## If you have any suggestions or advice, feel free to open an issue or a pull request.
 Contributions are always welcome!
